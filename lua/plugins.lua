@@ -24,7 +24,7 @@ require('packer').startup(function(use)
   use 'nvim-treesitter/playground'
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   use {'norcalli/nvim-colorizer.lua', config = "require('colorizer').setup {}"}
-  --use 'lukas-reineke/indent-blankline.nvim'
+  use {'lukas-reineke/indent-blankline.nvim', config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}"}
   --use 'williamboman/nvim-lsp-installer'
   --use 'neovim/nvim-lspconfig'
   --use 'hrsh7th/cmp-nvim-lsp'
@@ -43,3 +43,4 @@ require('packer').startup(function(use)
   --use 'sindrets/diffview.nvim'
   --use 'lewis6991/gitsigns.nvim'
 end)
+
