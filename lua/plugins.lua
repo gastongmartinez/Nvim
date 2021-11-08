@@ -40,7 +40,7 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lua")
   use("hrsh7th/cmp-latex-symbols")
   use("onsails/lspkind-nvim")
-  --use 'glepnir/lspsaga.nvim'
+  use({ "glepnir/lspsaga.nvim", config = "require('saga')" })
   use({ "mhartington/formatter.nvim", config = "require('format')" })
   use("b3nj5m1n/kommentary")
   use({ "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup {}" })
