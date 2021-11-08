@@ -17,7 +17,7 @@ require('packer').startup(function(use)
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = "require('lualine').setup {options = {theme = 'onedark'}}"}
   use {'folke/which-key.nvim', config = "require('which-key').setup {}"}
-  --use 'kyazdani42/nvim-tree.lua'
+  use {'kyazdani42/nvim-tree.lua', config = "require('nvim-tree').setup {auto_close = true}"}
   --use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   --use 'nvim-treesitter/playground'
   --use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
