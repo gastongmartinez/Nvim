@@ -8,9 +8,11 @@ end
 vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  --use 'glepnir/dashboard-nvim'
+  use {'glepnir/dashboard-nvim', config = "require('dashboard')"}
   use {'navarasu/onedark.nvim', config = "require('onedark').setup {}"}
-  --use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
+  use {'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'},
+    config = "require('barbar')"}
   use {'hoob3rt/lualine.nvim', 
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = "require('lualine').setup {options = {theme = 'onedark'}}"}
