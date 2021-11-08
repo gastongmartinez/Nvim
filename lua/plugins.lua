@@ -16,7 +16,7 @@ require('packer').startup(function(use)
   use {'hoob3rt/lualine.nvim', 
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
     config = "require('lualine').setup {options = {theme = 'onedark'}}"}
-  --use 'folke/which-key.nvim'
+  use {'folke/which-key.nvim', config = "require('which-key').setup {}"}
   --use 'kyazdani42/nvim-tree.lua'
   --use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   --use 'nvim-treesitter/playground'
