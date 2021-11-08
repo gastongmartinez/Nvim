@@ -30,8 +30,6 @@ require("packer").startup(function(use)
     "lukas-reineke/indent-blankline.nvim",
     config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}",
   })
-  --use 'williamboman/nvim-lsp-installer'
-  --use 'neovim/nvim-lspconfig'
   use({ "hrsh7th/nvim-cmp", config = "require('cmpconf')" })
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
@@ -41,6 +39,8 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-latex-symbols")
   use("onsails/lspkind-nvim")
   use({ "glepnir/lspsaga.nvim", config = "require('saga')" })
+  use("williamboman/nvim-lsp-installer")
+  use({ "neovim/nvim-lspconfig", config = "require('lspconf')" })
   use({ "mhartington/formatter.nvim", config = "require('format')" })
   use("b3nj5m1n/kommentary")
   use({ "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup {}" })
