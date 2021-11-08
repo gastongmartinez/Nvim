@@ -23,7 +23,7 @@ require('packer').startup(function(use)
     run = ':TSUpdate'}
   use 'nvim-treesitter/playground'
   use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
-  --use 'norcalli/nvim-colorizer.lua'
+  use {'norcalli/nvim-colorizer.lua', config = "require('colorizer').setup {}"}
   --use 'lukas-reineke/indent-blankline.nvim'
   --use 'williamboman/nvim-lsp-installer'
   --use 'neovim/nvim-lspconfig'
