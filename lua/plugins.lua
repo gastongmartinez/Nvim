@@ -11,7 +11,9 @@ require('packer').startup(function(use)
   --use 'glepnir/dashboard-nvim'
   use {'navarasu/onedark.nvim', config = "require('onedark').setup {}"}
   --use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
-  --use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+  use {'hoob3rt/lualine.nvim', 
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = "require('lualine').setup {options = {theme = 'onedark'}}"}
   --use 'folke/which-key.nvim'
   --use 'kyazdani42/nvim-tree.lua'
   --use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
