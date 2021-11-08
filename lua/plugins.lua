@@ -9,7 +9,7 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   --use 'glepnir/dashboard-nvim'
-  --use 'navarasu/onedark.nvim'
+  use {'navarasu/onedark.nvim', config = "require('onedark').setup {}"}
   --use {'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'}}
   --use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
   --use 'folke/which-key.nvim'
