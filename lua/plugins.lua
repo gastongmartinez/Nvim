@@ -36,7 +36,7 @@ require('packer').startup(function(use)
   --use 'hrsh7th/cmp-latex-symbols'
   --use 'onsails/lspkind-nvim'
   --use 'glepnir/lspsaga.nvim'
-  --use 'mhartington/formatter.nvim'
+  use 'mhartington/formatter.nvim'
   use 'b3nj5m1n/kommentary'
   use {'windwp/nvim-autopairs', config = "require('nvim-autopairs').setup {}"}
   use { 'TimUntersberger/neogit',
