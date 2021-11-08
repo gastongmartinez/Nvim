@@ -18,8 +18,10 @@ require('packer').startup(function(use)
     config = "require('lualine').setup {options = {theme = 'onedark'}}"}
   use {'folke/which-key.nvim', config = "require('which-key').setup {}"}
   use {'kyazdani42/nvim-tree.lua', config = "require('nvim-tree').setup {auto_close = true}"}
-  --use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  --use 'nvim-treesitter/playground'
+  use {'nvim-treesitter/nvim-treesitter', 
+    config = "require('nvim-treesitter.configs').setup {ensure_installed = 'maintained', highlight = {enable = true}, indent = {enable = true}}",
+    run = ':TSUpdate'}
+  use 'nvim-treesitter/playground'
   --use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   --use 'norcalli/nvim-colorizer.lua'
   --use 'lukas-reineke/indent-blankline.nvim'
