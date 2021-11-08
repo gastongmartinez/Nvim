@@ -39,8 +39,10 @@ require('packer').startup(function(use)
   --use 'mhartington/formatter.nvim'
   use 'b3nj5m1n/kommentary'
   use {'windwp/nvim-autopairs', config = "require('nvim-autopairs').setup {}"}
-  --use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-  --use 'sindrets/diffview.nvim'
-  --use 'lewis6991/gitsigns.nvim'
+  use { 'TimUntersberger/neogit',
+    requires = {'nvim-lua/plenary.nvim'},
+    config = "require('neogit').setup {disable_commit_confirmation = true, integrations = {diffview = true}}"}
+  use 'sindrets/diffview.nvim'
+  use 'lewis6991/gitsigns.nvim'
 end)
 
