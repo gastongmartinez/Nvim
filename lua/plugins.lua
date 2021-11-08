@@ -22,7 +22,7 @@ require('packer').startup(function(use)
     config = "require('nvim-treesitter.configs').setup {ensure_installed = 'maintained', highlight = {enable = true}, indent = {enable = true}}",
     run = ':TSUpdate'}
   use 'nvim-treesitter/playground'
-  --use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
+  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
   --use 'norcalli/nvim-colorizer.lua'
   --use 'lukas-reineke/indent-blankline.nvim'
   --use 'williamboman/nvim-lsp-installer'
