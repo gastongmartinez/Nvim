@@ -22,7 +22,7 @@ local black = function()
   end
 end
 
-require("formatter").setup({
+require("formatter").setup {
   logging = false,
   filetype = {
     javascript = { prettier },
@@ -43,7 +43,7 @@ require("formatter").setup({
       end,
     },
   },
-})
+}
 
 -- Runs Formatter on save
 vim.api.nvim_exec([[
