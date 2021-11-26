@@ -18,33 +18,6 @@ map ('n', '<Leader>fa', ':DashboardFindWord<CR>')
 map ('n', '<Leader>fb', ':DashboardJumpMark<CR>')
 map ('n', '<Leader>cn', ':DashboardNewFile<CR>')
 
--- Tabs
--- Move to previous/next
-map('n', '<Leader>bp', ':BufferPrevious<CR>')
-map('n', '<Leader>bn', ':BufferNext<CR>')
--- Re-order to previous/next
-map('n', '<Leader>b<', ':BufferMovePrevious<CR>')
-map('n', '<Leader>b>', ':BufferMoveNext<CR>')
--- Goto buffer in position...
-map('n', '<Leader>b1', ':BufferGoto 1<CR>')
-map('n', '<Leader>b2', ':BufferGoto 2<CR>')
-map('n', '<Leader>b3', ':BufferGoto 3<CR>')
-map('n', '<Leader>b4', ':BufferGoto 4<CR>')
-map('n', '<Leader>b5', ':BufferGoto 5<CR>')
-map('n', '<Leader>b6', ':BufferGoto 6<CR>')
-map('n', '<Leader>b7', ':BufferGoto 7<CR>')
-map('n', '<Leader>b8', ':BufferGoto 8<CR>')
-map('n', '<Leader>b9', ':BufferGoto 9<CR>')
-map('n', '<Leader>b0', ':BufferLast<CR>')
--- Close buffer
-map('n', '<Leader>bc', ':BufferClose<CR>')
--- Magic buffer-picking mode
-map('n', '<Leader>bbp', ':BufferPick<CR>')
--- Sort automatically by...
-map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>')
-map('n', '<Space>bd', ':BufferOrderByDirectory<CR>')
-map('n', '<Space>bl', ':BufferOrderByLanguage<CR>')
-
 -- NvimTree
 map('n', '<Space>tt', ':NvimTreeToggle<CR>')
 map('n', '<Space>tf', ':NvimTreeFocus<CR>')
