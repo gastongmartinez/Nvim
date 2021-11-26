@@ -19,6 +19,7 @@ local mappings = {
     ["0"] = { ":BufferLast<CR>", "Go to Last Buffer" },
   },
   F = { ":Format<CR>", "Format File" },
+  a = { ":NvimTreeToggle<CR>", "NvimTree Toggle" },
   g = {
     name = "Git",
     g = { ":Neogit<cr>", "Neogit" },
