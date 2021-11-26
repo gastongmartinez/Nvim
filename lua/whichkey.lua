@@ -22,10 +22,10 @@ local mappings = {
   a = { ":NvimTreeToggle<CR>", "NvimTree Toggle" },
   g = {
     name = "Git",
-    g = { ":Neogit<cr>", "Neogit" },
-    d = { ":DiffviewOpen<cr>", "Diffview" },
-    l = { ":Neogit log<cr>", "Log" },
-    p = { ":Neogit push<cr>", "Push" },
+    g = { ":Neogit<CR>", "Neogit" },
+    d = { ":DiffviewOpen<CR>", "Diffview" },
+    l = { ":Neogit log<CR>", "Log" },
+    p = { ":Neogit push<CR>", "Push" },
   },
   t = {
     name = "Telescope",
@@ -33,6 +33,13 @@ local mappings = {
     g = { ":Telescope live_grep<CR>", "Live Grep" },
     b = { ":Telescope buffers<CR>", "Buffers" },
     h = { ":Telescope help_tags<CR>", "Help" },
+  },
+  d = {
+    name = "Dashboard",
+    f = { ":DashboardFindFile<CR>", "Find File" },
+    r = { ":DashboardFindHistory<CR>", "Recent Files" },
+    w = { ":DashboardFindWord<CR>", "Find Word" },
+    n = { ":DashboardNewFile<CR>", "New File" },
   },
 }
 local opts = { prefix = "<leader>" }
