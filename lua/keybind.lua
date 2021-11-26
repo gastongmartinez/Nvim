@@ -24,7 +24,3 @@ map('n', 'gh', ':Lspsaga lsp_finder<CR>')
 --map ('n', '<Leader>fa', ':DashboardFindWord<CR>')
 --map ('n', '<Leader>fb', ':DashboardJumpMark<CR>')
 --map ('n', '<Leader>cn', ':DashboardNewFile<CR>')
-
--- NvimTree
-map('n', '<Space>tt', ':NvimTreeToggle<CR>')
-map('n', '<Space>tf', ':NvimTreeFocus<CR>')
