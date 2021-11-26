@@ -28,9 +28,3 @@ map('n', 'gh', ':Lspsaga lsp_finder<CR>')
 -- NvimTree
 map('n', '<Space>tt', ':NvimTreeToggle<CR>')
 map('n', '<Space>tf', ':NvimTreeFocus<CR>')
-
--- Telescope
-map('n', '<leader>ff', ':Telescope find_files<CR>')
-map('n', '<leader>fg', ':Telescope live_grep<CR>')
-map('n', '<leader>fb', ':Telescope buffers<CR>')
-map('n', '<leader>fh', ':Telescope help_tags<CR>')
