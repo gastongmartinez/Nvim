@@ -29,6 +29,7 @@ local mappings = {
   },
   t = {
     name = "Telescope",
+    c = { [[:lua require'telescope.builtin'.file_browser{cwd="~/.config/nvim/lua/"}<CR>]], "Config directory" },
     f = { ":Telescope find_files<CR>", "Find Files" },
     g = { ":Telescope live_grep<CR>", "Live Grep" },
     b = { ":Telescope buffers<CR>", "Buffers" },
