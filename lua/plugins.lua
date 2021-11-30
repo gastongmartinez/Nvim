@@ -20,7 +20,8 @@ require("packer").startup(function(use)
   use({ "kyazdani42/nvim-tree.lua", config = "require('nvim-tree').setup {auto_close = true}" })
   use({
     "nvim-treesitter/nvim-treesitter",
-    config = "require('nvim-treesitter.configs').setup {ensure_installed = { 'bash', 'c', 'c_sharp', 'cmake', 'comment', 'cpp', 'css', 'dockerfile', 'go', 'html', 'java', 'javascript', 'json', 'json5', 'latex', 'lua', 'php', 'python', 'regex', 'rust', 'scss', 'typescript', 'yaml'}, highlight = {enable = true}, indent = {enable = true}}", run = ":TSUpdate",
+    config = "require('nvim-treesitter.configs').setup {ensure_installed = { 'bash', 'c', 'c_sharp', 'cmake', 'comment', 'cpp', 'css', 'dockerfile', 'go', 'html', 'java', 'javascript', 'json', 'json5', 'latex', 'lua', 'php', 'python', 'regex', 'rust', 'scss', 'typescript', 'yaml'}, highlight = {enable = true}, indent = {enable = true}}",
+    run = ":TSUpdate",
   })
   use("nvim-treesitter/playground")
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } })
