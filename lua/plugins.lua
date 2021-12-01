@@ -41,7 +41,7 @@ require("packer").startup(function(use)
   use({ "glepnir/lspsaga.nvim", config = "require('saga')" })
   use("williamboman/nvim-lsp-installer")
   use({ "neovim/nvim-lspconfig", config = "require('lspconf')" })
-  use({ "mhartington/formatter.nvim", config = "require('format')" })
+  use({ "mhartington/formatter.nvim", config = "require('setup/format')" })
   use("b3nj5m1n/kommentary")
   use({ "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup {}" })
   use({
