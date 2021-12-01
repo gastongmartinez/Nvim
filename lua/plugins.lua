@@ -8,7 +8,7 @@ end
 vim.cmd([[packadd packer.nvim]])
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
-  use({ "glepnir/dashboard-nvim", config = "require('dashboard')" })
+  use({ "glepnir/dashboard-nvim", config = "require('setup/dashboard')" })
   use({ "navarasu/onedark.nvim", config = "require('onedark').setup {}" })
   use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" }, config = "require('setup/barbar')" })
   use({
