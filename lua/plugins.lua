@@ -30,7 +30,7 @@ require("packer").startup(function(use)
     "lukas-reineke/indent-blankline.nvim",
     config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}",
   })
-  use({ "hrsh7th/nvim-cmp", config = "require('cmpconf')" })
+  use({ "hrsh7th/nvim-cmp", config = "require('setup/cmpconf')" })
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-vsnip")
