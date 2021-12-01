@@ -1,3 +1,3 @@
-require('options')
-require('plugins')
-require('keybind')
+require("options")
+require("plugins")
+require("kbs")
