@@ -20,7 +20,7 @@ require("packer").startup(function(use)
     run = ":TSUpdate",
   })
   use({ "nvim-treesitter/playground", after = "nvim-treesitter" })
-  use({ "nvim-telescope/telescope.nvim", cmd = "Telescope", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } })
+  use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } })
   use({ "norcalli/nvim-colorizer.lua", config = "require('colorizer').setup {}", event = "BufRead" })
   use({ "lukas-reineke/indent-blankline.nvim", config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}", event = "BufRead" })
   use({ "hrsh7th/nvim-cmp", config = "require('setup/cmpconf')" })
