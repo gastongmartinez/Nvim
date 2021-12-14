@@ -31,3 +31,8 @@ vim.cmd("filetype indent on")
 
 vim.g.indentLine_fileTypeExclude = { "dashboard" }
 vim.g.kommentary_create_default_mappings = true
+
+-- TreeSitter Folding
+vim.o.foldlevel = 10
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
