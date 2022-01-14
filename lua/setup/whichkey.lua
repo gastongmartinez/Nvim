@@ -1,4 +1,5 @@
 local wk = require("which-key")
+local pconf = vim.fn.stdpath("config")
 
 local mappings = {
   b = {
@@ -29,7 +30,8 @@ local mappings = {
   },
   t = {
     name = "Telescope",
-    c = { [[:lua require'telescope.builtin'.file_browser{cwd="~/.config/nvim/lua/"}<CR>]], "Config directory" },
+    c = { ":Telescope file_browser path=" .. pconf .. "<CR>", "Config directory" },
+    e = { ":Telescope file_browser<CR>", "File Explorer" },
     f = { ":Telescope find_files<CR>", "Find Files" },
     g = { ":Telescope live_grep<CR>", "Live Grep" },
     b = { ":Telescope buffers<CR>", "Buffers" },
