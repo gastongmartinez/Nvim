@@ -8,16 +8,16 @@ end
 vim.cmd([[packadd packer.nvim]])
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
-  use({ "glepnir/dashboard-nvim", config = "require('setup/dashboard')" })
-  use({ "navarasu/onedark.nvim", config = "require('setup/onedark')" })
-  use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" }, config = "require('setup/barbar')" })
+  use({ "glepnir/dashboard-nvim", config = "require('gm/dashboard')" })
+  use({ "navarasu/onedark.nvim", config = "require('gm/onedark')" })
+  use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" }, config = "require('gm/barbar')" })
   use({
     "hoob3rt/lualine.nvim",
     event = "BufWinEnter",
     requires = { "kyazdani42/nvim-web-devicons", opt = true },
     config = "require('lualine').setup {options = {theme = 'onedark'}}",
   })
-  use({ "folke/which-key.nvim", event = "BufWinEnter", config = "require('setup/whichkey')" })
+  use({ "folke/which-key.nvim", event = "BufWinEnter", config = "require('gm/whichkey')" })
   use({ "kyazdani42/nvim-tree.lua", cmd = "NvimTreeToggle", config = "require('nvim-tree').setup {auto_close = true}" })
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -27,14 +27,14 @@ require("packer").startup(function(use)
   })
   use({ "nvim-treesitter/playground", after = "nvim-treesitter" })
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } })
-  use({ "nvim-telescope/telescope-file-browser.nvim", config = "require('setup/filebrowser')" })
+  use({ "nvim-telescope/telescope-file-browser.nvim", config = "require('gm/filebrowser')" })
   use({ "norcalli/nvim-colorizer.lua", config = "require('colorizer').setup {}", event = "BufRead" })
   use({
     "lukas-reineke/indent-blankline.nvim",
     config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}",
     event = "BufRead",
   })
-  use({ "hrsh7th/nvim-cmp", config = "require('setup/cmpconf')" })
+  use({ "hrsh7th/nvim-cmp", config = "require('gm/cmpconf')" })
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-vsnip")
@@ -42,10 +42,10 @@ require("packer").startup(function(use)
   use("hrsh7th/cmp-nvim-lua")
   use("hrsh7th/cmp-latex-symbols")
   use("onsails/lspkind-nvim")
-  use({ "tami5/lspsaga.nvim", config = "require('setup/saga')" })
+  use({ "tami5/lspsaga.nvim", config = "require('gm/saga')" })
   use("williamboman/nvim-lsp-installer")
-  use({ "neovim/nvim-lspconfig", config = "require('setup/lspconf')" })
-  use({ "mhartington/formatter.nvim", event = "BufWritePre", config = "require('setup/format')" })
+  use({ "neovim/nvim-lspconfig", config = "require('gm/lspconf')" })
+  use({ "mhartington/formatter.nvim", event = "BufWritePre", config = "require('gm/format')" })
   use("b3nj5m1n/kommentary")
   use({ "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup {}", after = "nvim-cmp" })
   use({
