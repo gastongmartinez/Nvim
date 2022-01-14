@@ -9,20 +9,30 @@ vim.cmd([[packadd packer.nvim]])
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   use({ "glepnir/dashboard-nvim", config = "require('setup/dashboard')" })
-  use({ "navarasu/onedark.nvim", config = "require('onedark').setup {}" })
+  use({ "navarasu/onedark.nvim", config = "require('setup/onedark')" })
   use({ "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" }, config = "require('setup/barbar')" })
-  use({ "hoob3rt/lualine.nvim", event = "BufWinEnter", requires = { "kyazdani42/nvim-web-devicons", opt = true }, config = "require('lualine').setup {options = {theme = 'onedark'}}", })
+  use({
+    "hoob3rt/lualine.nvim",
+    event = "BufWinEnter",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    config = "require('lualine').setup {options = {theme = 'onedark'}}",
+  })
   use({ "folke/which-key.nvim", event = "BufWinEnter", config = "require('setup/whichkey')" })
   use({ "kyazdani42/nvim-tree.lua", cmd = "NvimTreeToggle", config = "require('nvim-tree').setup {auto_close = true}" })
   use({
-    "nvim-treesitter/nvim-treesitter", event = "BufWinEnter",
+    "nvim-treesitter/nvim-treesitter",
+    event = "BufWinEnter",
     config = "require('nvim-treesitter.configs').setup {ensure_installed = { 'bash', 'c', 'c_sharp', 'cmake', 'comment', 'cpp', 'css', 'dockerfile', 'go', 'html', 'java', 'javascript', 'json', 'json5', 'latex', 'lua', 'php', 'python', 'regex', 'rust', 'scss', 'typescript', 'yaml'}, highlight = {enable = true}, indent = {enable = true}}",
     run = ":TSUpdate",
   })
   use({ "nvim-treesitter/playground", after = "nvim-treesitter" })
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } })
   use({ "norcalli/nvim-colorizer.lua", config = "require('colorizer').setup {}", event = "BufRead" })
-  use({ "lukas-reineke/indent-blankline.nvim", config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}", event = "BufRead" })
+  use({
+    "lukas-reineke/indent-blankline.nvim",
+    config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}",
+    event = "BufRead",
+  })
   use({ "hrsh7th/nvim-cmp", config = "require('setup/cmpconf')" })
   use("hrsh7th/cmp-nvim-lsp")
   use("hrsh7th/cmp-buffer")
@@ -37,7 +47,12 @@ require("packer").startup(function(use)
   use({ "mhartington/formatter.nvim", event = "BufWritePre", config = "require('setup/format')" })
   use("b3nj5m1n/kommentary")
   use({ "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup {}", after = "nvim-cmp" })
-  use({ "TimUntersberger/neogit", requires = { "nvim-lua/plenary.nvim" }, cmd = "Neogit", config = "require('neogit').setup {disable_commit_confirmation = true, integrations = {diffview = true}}", })
-  use({"sindrets/diffview.nvim", cmd = "DiffviewOpen"})
-  use({"lewis6991/gitsigns.nvim", event = "BufReadPre"})
+  use({
+    "TimUntersberger/neogit",
+    requires = { "nvim-lua/plenary.nvim" },
+    cmd = "Neogit",
+    config = "require('neogit').setup {disable_commit_confirmation = true, integrations = {diffview = true}}",
+  })
+  use({ "sindrets/diffview.nvim", cmd = "DiffviewOpen" })
+  use({ "lewis6991/gitsigns.nvim", event = "BufReadPre" })
 end)
