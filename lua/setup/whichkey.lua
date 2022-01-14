@@ -44,6 +44,7 @@ local mappings = {
     w = { ":DashboardFindWord<CR>", "Find Word" },
     n = { ":DashboardNewFile<CR>", "New File" },
   },
+  o = { [[<cmd>lua require('onedark').toggle()<CR>]], "Toggle OneDark Theme" },
 }
 local opts = { prefix = "<leader>" }
 wk.register(mappings, opts)
