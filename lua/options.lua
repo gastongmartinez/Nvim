@@ -20,9 +20,6 @@ vim.o.termguicolors = true
 vim.o.completeopt = "menu,menuone,noselect"
 vim.o.splitright = true
 vim.o.splitbelow = true
-if vim.fn.has("win32") == 1 then
-  vim.o.shell = "pwsh.exe"
-end
 
 -- Reconocimiento de tipo de archivo
 vim.cmd("filetype on")
