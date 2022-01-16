@@ -44,10 +44,10 @@ require("packer").startup(function(use)
   use({ "tami5/lspsaga.nvim", config = "require('gm/saga')" })
   use("williamboman/nvim-lsp-installer")
   use({ "neovim/nvim-lspconfig", config = "require('gm/lspconf')" })
-  use({ "mhartington/formatter.nvim", event = "BufWritePre", config = "require('gm/format')" })
   use("b3nj5m1n/kommentary")
   use({ "windwp/nvim-autopairs", config = "require('nvim-autopairs').setup {}", after = "nvim-cmp" })
-  use({
+                     use ({ "jose-elias-alvarez/null-ls.nvim", config = "require('gm/null-ls')" })
+    use({
     "TimUntersberger/neogit",
     requires = { "nvim-lua/plenary.nvim" },
     cmd = "Neogit",
