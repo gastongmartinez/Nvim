@@ -4,6 +4,7 @@ local pconf = vim.fn.stdpath("config")
 local mappings = {
   b = {
     name = "Buffers",
+    c = { ":BufferClose<CR>", "Close" },
     p = { ":BufferPrevious<CR>", "Previous" },
     n = { ":BufferNext<CR>", "Next" },
     P = { ":BufferMovePrevious<CR>", "Move Previous" },
