@@ -7,8 +7,8 @@ local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-local lspkind = require'lspkind'
-local cmp = require'cmp'
+local lspkind = require("lspkind")
+local cmp = require("cmp")
 
 cmp.setup({
   snippet = {
@@ -17,15 +17,15 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.close(),
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif vim.fn["vsnip#available"]() == 1 then
+      elseif vim.fn["vsnip#available"](1) == 1 then
         feedkey("<Plug>(vsnip-expand-or-jump)", "")
       elseif has_words_before() then
         cmp.complete()
@@ -42,13 +42,13 @@ cmp.setup({
     end, { "i", "s" }),
   },
   sources = {
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-    { name = 'buffer' },
-    { name = 'latex_symbols' },
-    { name = 'nvim_lua' },
+    { name = "nvim_lsp" },
+    { name = "vsnip" },
+    { name = "buffer" },
+    { name = "latex_symbols" },
+    { name = "nvim_lua" },
   },
   formatting = {
-    format = lspkind.cmp_format({with_text = false, maxwidth = 50})
-  }
+    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 }),
+  },
 })
