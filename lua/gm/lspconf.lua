@@ -95,7 +95,7 @@ for _, server in ipairs(langservers) do
       sumneko_root_path = "/home/" .. USER .. "/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/"
       sumneko_binary = "/home/"
         .. USER
-        .. "/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/Linux/lua-language-server"
+        .. "/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server"
       sumneko_main = "/main.lua"
       table.insert(runtime_path, "lua/?.lua")
       table.insert(runtime_path, "lua/?/init.lua")
