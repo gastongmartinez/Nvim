@@ -20,7 +20,7 @@ local mappings = {
     ["9"] = { ":BufferGoto 9<CR>", "Go to Buffer 9" },
     ["0"] = { ":BufferLast<CR>", "Go to Last Buffer" },
   },
-  F = { ":lua vim.lsp.buf.formatting_sync()<CR>", "Format File" },
+  f = { ":lua vim.lsp.buf.formatting_sync()<CR>", "Format File" },
   a = { ":NvimTreeToggle<CR>", "NvimTree Toggle" },
   g = {
     name = "Git",
