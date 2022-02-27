@@ -2,7 +2,7 @@
 
 nvim -c "PackerSync"
 
-pip install black 'python-lsp-server[all]' pyright
+pip install black 'python-lsp-server[all]' pyright yamllint autopep8
 
 cargo install stylua
 
