@@ -28,7 +28,7 @@ require("packer").startup(function(use)
   use({ "nvim-treesitter/playground", after = "nvim-treesitter" })
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } })
   use({ "nvim-telescope/telescope-file-browser.nvim", config = "require('gm/filebrowser')" })
-  use({ "norcalli/nvim-colorizer.lua", config = "require('colorizer').setup {}", event = "BufRead" })
+  use({ "norcalli/nvim-colorizer.lua", config = "require('colorizer').setup {}" })
   use({
     "lukas-reineke/indent-blankline.nvim",
     config = "require('indent_blankline').setup {char = '|', buftype_exclude = {'terminal', 'help'}, indentLine_fileTypeExclude = {'dashboard'}}",
