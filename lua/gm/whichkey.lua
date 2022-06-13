@@ -37,12 +37,10 @@ local mappings = {
     g = { ":Telescope live_grep<CR>", "Live Grep" },
     b = { ":Telescope buffers<CR>", "Buffers" },
     h = { ":Telescope help_tags<CR>", "Help" },
+    r = { ":Telescope oldfiles<CR>", "Recent Files" },
   },
   d = {
     name = "Dashboard",
-    f = { ":DashboardFindFile<CR>", "Find File" },
-    r = { ":DashboardFindHistory<CR>", "Recent Files" },
-    w = { ":DashboardFindWord<CR>", "Find Word" },
     n = { ":DashboardNewFile<CR>", "New File" },
   },
   o = { [[<cmd>lua require('onedark').toggle()<CR>]], "Toggle OneDark Theme" },
